@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-bg {
+	background-image: url(https://img.freepik.com/photos-gratuite/close-up-mains-hommes-utilisant-ordinateur-portable-maison_1150-790.jpg?t=st=1719857756~exp=1719861356~hmac=84a177ae01b413688c622d803c737c8ba2f17d7894dddc82c214e9d50b579f3e&w=900);
+}
+
+.service-bg{
+  background-image: url(https://img.freepik.com/photos-gratuite/concept-papier-peint-beton-colore-texture_53876-31799.jpg?t=st=1719931478~exp=1719935078~hmac=1f33776b9321ae5aea57c3152e53f373b36e34a56e8ffb922000711f6c2b726c&w=900);
+}
+
+.work-plan{
+  background-image: url(https://img.freepik.com/photos-gratuite/fond-3d-cubes-blancs_23-2150472996.jpg?t=st=1719958160~exp=1719961760~hmac=5f7da745a95605231777044b6088a391196d6abd43b436073b63925eb55c37ad&w=900);
+}
+
+.footer-img {
+  background-image: url(https://img.freepik.com/photos-gratuite/abstrait-vente-business-fond-banniere-design-polyvalent_1340-16799.jpg?t=st=1720129889~exp=1720133489~hmac=2276cb457f4596d7b469eb8302d12429732a5433714475f10eff797806356cf6&w=1380);
+}
+
+.bg-cards{
+  background-image: url(https://img.freepik.com/photos-premium/design-fond-creatif-abstrait-bleu-fonce-oxford_851755-194918.jpg?w=1060);
+}
+
+.bg-beige{
+  background-image: url(https://img.freepik.com/photos-gratuite/fond-texture-papier-espace-design_53876-41739.jpg?t=st=1720364480~exp=1720368080~hmac=8df053f5ab52a5eb643828b65e8dcb8b81dff78c9d4d3095acbd95a017926224&w=900);
+}
+
