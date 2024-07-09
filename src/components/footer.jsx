@@ -5,7 +5,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import Image from 'next/image';
-import UP from "@/assets/3.jpg"
 
 function Footer() {
     const footerNavs = [
@@ -85,9 +84,7 @@ function Footer() {
             <div className="px-10 md:px-8">
                 <div className="max-w-40 px-4 rounded-md bg-white ml-10" data-aos="fade-down">
                     <a href="javascript:void(0)">
-                        <Image
-                            src={UP}
-                        />
+                        SRC
                     </a>
                 </div>
                 <div className="flex-1 mt-16 space-y-6 lg:px-10 justify-between sm:flex md:space-y-0">
