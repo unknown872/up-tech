@@ -19,10 +19,10 @@ function Accueil() {
                         Notre agence web est capable de repondre a <br /> tous vos besoins et d'elaborer une veritable <br /> strategie adaptee a vos besoin selon <br /> votre domaine d'activite.
                     </p>
                 </div>
-                <div className="mt-5 items-center justify-center gap-3 sm:flex" data-aos="fade-right" data-aos-duration="3000">
+                <div className="lg:mt-5 mt-8 items-center justify-center gap-3 sm:flex" data-aos="fade-right" data-aos-duration="3000">
                     <a
                         href="./contact"
-                        className="lg:text-lg text-sm font-normal hover:bg-blue-500 hover:text-white mt-2 lg:py-5 lg:px-8 py-5 px-3 text-blue-500 uppercase bg-white rounded-md duration-150"
+                        className="lg:text-lg text-sm font-bold hover:bg-blue-500 hover:text-white mt-2 lg:py-5 lg:px-8 py-5 px-3 text-blue-500 uppercase bg-white rounded-md duration-150"
                     >
                         <span>Contactez-nous</span>
                     </a>
