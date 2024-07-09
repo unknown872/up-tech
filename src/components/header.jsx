@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useState } from 'react';
-import Uptech from "@/assets/Up.jpg"
+import Up from "@/assets/Up.jpg"
 import Image from 'next/image';
 
 function Header() {
@@ -30,7 +30,7 @@ function Header() {
                 <div className="flex items-center justify-between py-3 md:py-5 md:block" data-aos="fade-down">
                     <a href="javascript:void(0)">
                         <Image 
-                            src={Uptech}
+                            src={Up}
                             width={120}
                             height={50}
                             alt="Float UI logo"

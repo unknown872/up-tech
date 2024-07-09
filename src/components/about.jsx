@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import banner from '@/assets/7462235.jpg';
+import banner from '@/assets/banner.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaArrowRight } from "react-icons/fa6";
