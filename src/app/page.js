@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Header from "../components/header";
-import BgImage from "../../src/assets/background.jpg"
+import Header from "@/components/header";
 import Accueil from "@/components/accueil";
 import About from "@/components/about";
 import Features from "@/components/features";

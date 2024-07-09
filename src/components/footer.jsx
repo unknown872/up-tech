@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import Image from 'next/image';
-import Uptech from "../../src/assets/Up.jpg"
+import Uptech from "@/assets/Up.jpg"
 
 function Footer() {
     const footerNavs = [
