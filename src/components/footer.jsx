@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import Image from 'next/image';
-import Up from "@/assets/UP.jpg"
+import Up from "@/assets/3.jpg"
 
 function Footer() {
     const footerNavs = [

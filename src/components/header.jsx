@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { useState } from 'react';
-import Up from "@/assets/UP.JPG"
+import Up from "@/assets/3.JPG"
 import Image from 'next/image';
 
 function Header() {
