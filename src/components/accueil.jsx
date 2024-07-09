@@ -12,7 +12,7 @@ function Accueil() {
         <section id="home" className="overflow-hidden py-64 px-4 bg-cover md:px-8 image-bg" data-aos="zoom-out" data-aos-duration="2000">
             <div className="text-center relative">
                 <div className="">
-                    <h1 className="text-4xl sm:flex-1 lg:text-6xl sm:text-2xl font-extrabold md:text-4xl text-blue-500" data-aos="fade-up" data-aos-duration="2000">
+                    <h1 className="text-4xl whitespace-nowrap lg:text-6xl sm:text-2xl font-extrabold md:text-4xl text-blue-500" data-aos="fade-up" data-aos-duration="2000">
                         Des solutions innovantes
                     </h1>
                     <p className="text-black font-medium leading-relaxed animate-fadein500 mt-3 lg:text-2xl whitespace-normal" data-aos="fade-up" data-aos-duration="3000">
