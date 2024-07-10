@@ -23,7 +23,7 @@ function About() {
                     <div className="lg:mt-5 mt-10 gap-3 sm:flex"  data-aos="fade-right" data-aos-duration="3000">
                         <a
                             href="./about"
-                            className="hover:bg-blue-800 mt-4 hover:text-white lg:text-lg text-sm lg:font-medium text-bold py-5 px-3 lg:py-4 lg:px-8 text-white uppercase bg-blue-500 rounded-md duration-150"
+                            className="hover:bg-blue-800 mt-4 hover:text-white lg:text-lg text-sm lg:font-medium font-semibold text-bold py-5 px-3 lg:py-4 lg:px-8 text-white uppercase bg-blue-500 rounded-md duration-150"
                         >
                             <span>
                                 A propos de nous

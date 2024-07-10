@@ -63,25 +63,25 @@ function Service() {
     ]
     return (
         <section id="service" className="py-20 bg-cover relative service-bg">
-            <div className="flex py-10">
-                <div className="w-1/2" data-aos="fade-right">
-                    <h1 className='font-semibold text-xl text-white ml-20'>Domaine d'intervention ➖</h1>
-                    <p className='font-extrabold text-white text-5xl ml-20 mt-4'>Digitalisation de services</p>
+            <div className="lg:flex py-10">
+                <div className="lg:w-1/2 p-4 pt-2" data-aos="fade-right">
+                    <h1 className='font-semibold whitespace-pre-line text-xl text-white lg:ml-20 '>Domaine d'intervention ➖</h1>
+                    <p className='font-extrabold whitespace-pre-line text-white lg:text-5xl text-3xl lg:ml-20 mt-4'>Digitalisation de services</p>
                 </div>
-                <div className="w-1/2" data-aos="fade-right">
+                <div className="lg:w-1/2 p-4 pb-0" data-aos="fade-right">
                     <p className='text-xl text-white'>Nous vous accompagnons dans la conception, la réalisation et la <br /> transformation digitale de votre société</p>
                 </div>
             </div>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-                <div className="mt-12">
-                    <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="lg:mt-10 mt-4">
+                    <ul className="lg:mt-6 mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {
                             features.map((item, idx) => (
-                                <li key={idx} data-aos="fade-up" data-aos-duration="3000" className='border py-6 pl-0 px-4 cursor-default bg-white flex items-center hover:bg-blue-950 hover:border-none text-blue-950 hover:text-white'>
+                                <li key={idx} data-aos="fade-up" data-aos-duration="3000" className='border lg:py-6 pl-0 lg:px-4 py-2 px-2 cursor-default bg-white flex items-center hover:bg-blue-950 hover:border-none text-blue-950 hover:text-white ml-2 mr-2'>
                                     <div className="w-20 h-20 bg-blue-950 border text-white rounded-full flex items-center justify-center mr-4 ml-2">
                                         {item.icon}
                                     </div>
-                                    <h4 className="font-bold text-3xl">
+                                    <h4 className="font-bold lg:text-3xl text-xl">
                                         {item.title}
                                     </h4>
                                 </li>
