@@ -18,7 +18,7 @@ function Product() {
             href: "javascript:void(0)"
         },
         {
-            title: "gestion immobilière",
+            title: "Gestion immobilière",
             img: "https://img.freepik.com/photos-gratuite/haute-vue-mains-articles-papeterie_23-2148301748.jpg?t=st=1720304927~exp=1720308527~hmac=ba6f31f88abb60c172e3495efd3366de688d9fac4ba144d844fbbc0ee9529c3f&w=900",
             icon: <FaHome className='h-24 w-24 border rounded-full p-4'/>,
             href: "javascript:void(0)"
@@ -69,13 +69,13 @@ function Product() {
 
     return (
         <section className="mx-auto px-4 md:px-8 py-14 bg-beige bg-cover" id="product">
-            <div className="flex py-14">
-                <div className="w-1/2" data-aos="fade-right">
-                    <h1 className='font-semibold text-xl text-blue-950 ml-20'>Nos produits</h1>
-                    <p className='font-extrabold text-blue-950 text-5xl ml-20 mt-4'>Une multitude de solutions innovantes</p>
+            <div className="lg:flex py-14">
+                <div className="lg:w-1/2" data-aos="fade-right">
+                    <h1 className='font-semibold text-xl text-blue-950 lg:ml-20'>Nos produits</h1>
+                    <p className='font-extrabold text-blue-950 lg:text-5xl text-3xl lg:ml-20 lg:mt-0 mt-4'>Une multitude de solutions innovantes</p>
                 </div>
-                <div className="w-1/2" data-aos="fade-right">
-                    <p className='text-xl text-blue-950 font-medium'>Nous concevons les solutions qui vous permettront de vous démarquer et d’être en phase avec les attentes d’un monde moderne.</p>
+                <div className="lg:w-1/2" data-aos="fade-right">
+                    <p className='text-xl text-blue-950 font-medium lg:mt-0 mt-4'>Nous concevons les solutions qui vous permettront de vous démarquer et d’être en phase avec les attentes d’un monde moderne.</p>
                 </div>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 gap">

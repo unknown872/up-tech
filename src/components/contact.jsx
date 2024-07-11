@@ -36,11 +36,11 @@ function Contact() {
     ]
 
     return (
-        <section id="contact" className="relative py-28 bg-slate-100">
-            <div className="flex ml-10 mr-10 bg-white p-20 gap-x-14">
-                <div className="w-1/2">
-                    <div data-aos="fade-right" data-aos-duration="300">
-                        <h1 className="lg:text-4xl text-blue-950 font-bold md:text-4xl animate-slidein">
+        <section id="contact" className="relative lg:py-28 py-8 bg-slate-100">
+            <div className="lg:flex lg:ml-10 lg:mr-10 ml-4 mr-4 bg-white lg:p-20 p-4 gap-x-14 rounded-xl">
+                <div className="lg:w-1/2">
+                    <div data-aos="fade-right" data-aos-duration="300" className='mt-8'>
+                        <h1 className="lg:text-4xl text-4xl text-blue-950 font-bold md:text-4xl animate-slidein">
                             Restez-connecté
                         </h1>
                         <p className='mt-4 font-medium text-lg text-gray-600'>Contactez-nous et profitez d’une équipe d’experts très dynamique pour vous accompagner dans la transformation digitale de vos processus métier et vos projets.</p>
@@ -51,11 +51,11 @@ function Contact() {
                                 contactMethods.map((item, idx) => (
                                     <li key={idx} >
                                         <div className="mt-3 flex items-center gap-x-3">
-                                            <div data-aos="fade-down" data-aos-duration="3000" className="flex-none text-slate-50 bg-amber-500 p-4 rounded-md">
+                                            <div data-aos="fade-down" data-aos-duration="3000" className="flex-none text-slate-50 bg-amber-500 lg:p-4 p-2 rounded-md">
                                                 {item.icon}
                                             </div>
                                             <div className='' data-aos="fade-right" data-aos-duration="400">
-                                                <h4 className="text-lg text-gray-500 font-bold">{item.title}</h4>
+                                                <h4 className="text-lg text-gray-500 font-bold ">{item.title}</h4>
                                                 <p className='mt-2 text-2xl font-bold'>{item.contact}</p>
                                             </div>
                                         </div>
@@ -65,7 +65,7 @@ function Contact() {
                         </ul>
                     </div>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                     <div data-aos="fade-right" data-aos-duration="300">
                         <h1 className="lg:text-4xl text-blue-950 font-bold md:text-4xl animate-slidein">
                             Contactez-nous
