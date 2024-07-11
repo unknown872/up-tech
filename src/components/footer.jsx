@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
 import Image from 'next/image';
-import logo from "@/assets/logo.jpg"
+import logos from "@/assets/logos.png"
 
 function Footer() {
     const footerNavs = [
@@ -86,7 +86,7 @@ function Footer() {
                 <div className="max-w-40 px-4 rounded-md bg-white ml-10" data-aos="fade-down">
                     <a href="javascript:void(0)">
                         <Image
-                            src={logo}
+                            src={logos}
                         />
                     </a>
                 </div>

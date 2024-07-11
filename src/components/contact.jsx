@@ -20,7 +20,7 @@ function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
             ,
-            contact: "Utili-Tech@office.com",
+            contact: "uptech@gmail.com",
             title: "Email"
         },
         {
@@ -39,7 +39,7 @@ function Contact() {
         <section id="contact" className="relative lg:py-28 py-8 bg-slate-100">
             <div className="lg:flex lg:ml-10 lg:mr-10 ml-4 mr-4 bg-white lg:p-20 p-4 gap-x-14 rounded-xl">
                 <div className="lg:w-1/2">
-                    <div data-aos="fade-right" data-aos-duration="300" className='mt-8'>
+                    <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-8'>
                         <h1 className="lg:text-4xl text-4xl text-blue-950 font-bold md:text-4xl animate-slidein">
                             Restez-connecté
                         </h1>
@@ -54,9 +54,9 @@ function Contact() {
                                             <div data-aos="fade-down" data-aos-duration="3000" className="flex-none text-slate-50 bg-amber-500 lg:p-4 p-2 rounded-md">
                                                 {item.icon}
                                             </div>
-                                            <div className='' data-aos="fade-right" data-aos-duration="400">
-                                                <h4 className="text-lg text-gray-500 font-bold ">{item.title}</h4>
-                                                <p className='mt-2 text-2xl font-bold'>{item.contact}</p>
+                                            <div className='lg:p-0 p-2' data-aos="fade-right" data-aos-duration="400">
+                                                <h4 className="lg:text-lg text-base text- text-gray-500 font-bold ">{item.title}</h4>
+                                                <p className='mt-2 lg:text-2xl text-xl font-bold'>{item.contact}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -66,8 +66,8 @@ function Contact() {
                     </div>
                 </div>
                 <div className="lg:w-1/2">
-                    <div data-aos="fade-right" data-aos-duration="300">
-                        <h1 className="lg:text-4xl text-blue-950 font-bold md:text-4xl animate-slidein">
+                    <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-10'>
+                        <h1 className="lg:text-4xl text-blue-950 font-bold md:text-4xl text-4xl animate-slidein">
                             Contactez-nous
                         </h1>
                         <p className='mt-4 font-medium text-lg text-gray-600'>Prêt à démarrer votre projet ? Vous pouvez nous contacter en remplissant le formulaire ci dessous.</p>

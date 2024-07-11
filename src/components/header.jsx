@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
-import logo from "@/assets/logo.jpg"
+import logos from "@/assets/logos.png"
 
 function Header() {
 
@@ -30,7 +30,7 @@ function Header() {
                 <div className="flex items-center justify-between py-3 md:py-5 md:block" data-aos="fade-down">
                     <a href="javascript:void(0)">
                         <Image 
-                            src={logo}
+                            src={logos}
                             width={120}
                             height={50}
                             alt="Float UI logo"
