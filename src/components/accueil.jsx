@@ -15,8 +15,8 @@ function Accueil() {
                     <h1 className="text-4xl whitespace-nowrap text-center lg:text-6xl sm:text-2xl font-extrabold md:text-4xl text-blue-500" data-aos="fade-up" data-aos-duration="2000">
                         Solutions innovantes
                     </h1>
-                    <p className="text-black font-medium leading-relaxed animate-fadein500 mt-3 lg:text-2xl whitespace-normal" data-aos="fade-up" data-aos-duration="3000">
-                        Notre agence web est capable de repondre a <br /> tous vos besoins et d'elaborer une veritable <br /> strategie adaptee a vos besoin selon <br /> votre domaine d'activite.
+                    <p className="text-gray-700 text-center justify-center items-center px-14 whitespace-pre-line font-medium leading-relaxed animate-fadein500 mt-3 lg:text-2xl" data-aos="fade-up" data-aos-duration="3000">
+                    Notre agence web est capable de répondre à tous vos besoins et d'élaborer une véritable stratégie adaptée à vos besoins selon votre domaine d'activité
                     </p>
                 </div>
                 <div className="lg:mt-5 mt-8 items-center justify-center gap-3 sm:flex" data-aos="fade-right" data-aos-duration="3000">
