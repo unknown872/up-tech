@@ -25,7 +25,7 @@ export default function Home() {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="">
-          <Image src={loader} width={120} height={120} alt="Loading" />
+          <Image src={loader} width={120} height={120} alt="Loading" className="animate-bounce"/>
         </div>
       </div>
     )

@@ -42,7 +42,7 @@ function Service() {
             title: "BTP"
         },
         {
-            icon: <IoIosRestaurant className='h-10 w-10'/>,
+            icon: <IoIosRestaurant className='h-8 w-8'/>,
             title: "Restauration"
         }, {
             icon: <FaHotel className='h-8 w-8'/>,
@@ -78,10 +78,10 @@ function Service() {
                         {
                             features.map((item, idx) => (
                                 <li key={idx} data-aos="fade-up" data-aos-duration="3000" className='border lg:py-6 pl-0 lg:px-4 py-2 px-2 cursor-default bg-white flex items-center hover:bg-blue-950 hover:border-none text-blue-950 hover:text-white ml-2 mr-2'>
-                                    <div className="w-20 h-20 bg-blue-950 border text-white rounded-full flex items-center justify-center mr-4 ml-2">
+                                    <div className="w-20 h-20 bg-blue-950 border text-white rounded-full flex items-center justify-center lg:ml-0 ml-2 p-4">
                                         {item.icon}
                                     </div>
-                                    <h4 className="font-bold lg:text-3xl text-xl">
+                                    <h4 className="font-bold lg:text-3xl text-xl ml-2">
                                         {item.title}
                                     </h4>
                                 </li>
