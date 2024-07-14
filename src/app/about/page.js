@@ -8,6 +8,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { GrStatusGood } from "react-icons/gr";
 import loader from "@/assets/loader.png";
 import Image from "next/image";
+import project from "@/assets/project.png"
 
 function page() {
     const [loading, setLoading] = useState(true);
@@ -62,109 +63,35 @@ function page() {
             <Header />
             <section>
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
-                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>Contact</h1>
+                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>About</h1>
                 </div>
                 <div className="lg:flex bg-beige lg:p-20 p-4 gap-x-14">
                     <div className="lg:w-1/2">
                         <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-8'>
                             <h1 className="font-bold text-lg text-gray-600 animate-slidein">
-                                Restez-connecté
+                                Qui sommes-nous?
                             </h1>
                             <p className='mt-4 font-bold text-2xl text-blue-950'>
-                                Opter pour nos services, c‘est aborder le monde digital avec sérénité !
+                                Partenaire stratégique de votre transformation digitale
                             </p>
                         </div>
-                        <div className='lg:pr-24'>
-                            <ul className="mt-12 flex flex-col gap-x-12 gap-y-6 lg:gap-x-24">
-                                {
-                                    contactMethods.map((item, idx) => (
-                                        <li key={idx} className='border rounded-md p-4 bg-white hover:border-blue-500' data-aos="zoom-out">
-                                            <div className="mt-3 flex items-center gap-x-3">
-                                                <div data-aos="fade-down" data-aos-duration="3000" className="flex-none text-blue-400 lg:p-4 p-2">
-                                                    {item.icon}
-                                                </div>
-                                                <div className='lg:p-0 p-2' data-aos="fade-right" data-aos-duration="400">
-                                                    <h4 className="lg:text-xl text-base text-blue-950 font-bold">{item.title}</h4>
-                                                    <p className='mt-2 lg:text-normal text-normal text-gray-600'>{item.contact}</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                        <div className='mt-4 text-gray-700'>
+                            <p className="" data-aos="fade-right">
+                                <span className="font-bold text-cyan-950">Up-Tech</span> est spécialisée dans la conception et le développement de logiciels sur mesure, la transformation digitale et la fintech.
+                            </p>
+                            <p className="mt-3" data-aos="fade-right">
+                                Notre entreprise a été fondée avec l’objectif de fournir des solutions technologiques personnalisées pour répondre aux besoins spécifiques de nos clients, en utilisant les dernières technologies et les meilleures pratiques de l’industrie.
+                            </p>
+                            <p className="mt-3" data-aos="fade-right">
+                                Nous avons une équipe d’experts en développement de logiciels, d’architectes, de designers UX/UI et de consultants en transformation digitale, qui travaillent en étroite collaboration avec nos clients pour comprendre leurs besoins et leur fournir des solutions innovantes et efficaces.
+                            </p>
                         </div>
                     </div>
-                    <div className="lg:w-1/2">
-                        <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-10'>
-                            <h1 className="font-bold text-lg text-gray-600 animate-slidein">
-                                Contactez-nous!
-                            </h1>
-                            <p className='mt-4 font-bold text-2xl text-blue-950'>
-                                Profitez d’une équipe d’experts très dynamique pour vous accompagner
-                            </p>
+                    <div className="lg:w-1/2 lg:p-10">
+                        <div className="lg:pt-16 pt-10" data-aos="zoom-out" data-aos-duration="3000">
+                            <Image src={project}/>    
                         </div>
-                        <div className="mt-12 max-w-xl" data-aos="fade-right" data-aos-duration="500">
-                            <form
-                                className="space-y-5"
-                            >
-                                <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
-                                    <div>
-                                        <label className="text-normal text-gray-600">
-                                            Prenom *
-                                        </label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="w-full bg-white mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="text-normal text-gray-600">
-                                            Nom *
-                                        </label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="w-full bg-white mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label className="text-normal text-gray-600">
-                                        Email *
-                                    </label>
-                                    <input
-                                        type="email"
-                                        required
-                                        className="w-full mt-2 px-3 py-2 bg-white text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="text-normal text-gray-600">
-                                        Telephone *
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        required
-                                        className="w-full mt-2 px-3 py-2 bg-white text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="text-normal text-gray-600">
-                                        Message *
-                                    </label>
-                                    <textarea required className="w-full mt-2 bg-white h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"></textarea>
-                                </div>
-                                <button
-                                    className="flex px-10 py-6 text-white text-xl font-medium  bg-blue-600 hover:bg-blue-500 active:bg-blue-600 rounded-lg duration-150 shadow-3xl"
-                                    data-aos="fade-up"
-                                    data-aos-duration="3000"
-                                >
-                                    <span>Envoyer</span>
-                                    <GrStatusGood className='h-7 w-7 ml-2' />
-                                </button>
-                            </form>
-                        </div>
+
                     </div>
                 </div>
             </section>
