@@ -8,7 +8,11 @@ import { MdArrowOutward } from "react-icons/md";
 import { GrStatusGood } from "react-icons/gr";
 import loader from "@/assets/loader.png";
 import Image from "next/image";
-import project from "@/assets/project.png"
+import project from "@/assets/project.png";
+import * as Tabs from "@radix-ui/react-tabs";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import mascotte from "@/assets/mascotte.png"
 
 function page() {
     const [loading, setLoading] = useState(true);
@@ -19,6 +23,7 @@ function page() {
         }, 3000);
     }, []);
 
+    /*
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen">
@@ -28,6 +33,7 @@ function page() {
             </div>
         )
     }
+    */
     const contactMethods = [
         {
             icon:
@@ -58,14 +64,21 @@ function page() {
             title: "Our office"
         },
     ]
+
+    const tabItems = [
+        "Notre mission",
+        "Notre vision",
+        "Nos valeurs",
+    ];
+
     return (
         <div>
             <Header />
-            <section>
+            <section className="bg-beige">
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
                     <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>About</h1>
                 </div>
-                <div className="lg:flex bg-beige lg:p-20 p-4 gap-x-14">
+                <div className="lg:flex lg:p-20 p-4 gap-x-14">
                     <div className="lg:w-1/2">
                         <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-8'>
                             <h1 className="font-bold text-lg text-gray-600 animate-slidein">
@@ -89,9 +102,37 @@ function page() {
                     </div>
                     <div className="lg:w-1/2 lg:p-10">
                         <div className="lg:pt-16 pt-10" data-aos="zoom-out" data-aos-duration="3000">
-                            <Image src={project}/>    
+                            <Image src={project} />
                         </div>
+                    </div>
+                </div>
 
+                <div className="lg:mt-[-50px] sm:hidden mb-[-250px] block lg:mb-0">
+                    <Image src={mascotte} height={290} />
+                </div>
+                <div className="lg:flex bg-blue-about mt-10 mb-2 bg-cover lg:ml-10 lg:mr-10 ml-2 mr-2">
+                    <div className="lg:ml-20 lg:pt-16 ml-4 pt-56">
+                        <h1 className="lg:pl-20 text-white font-medium text-4xl lg:mb-0 mb-3">Vous voulez <span className="font-bold">nous contactez?</span></h1>
+                        <div className="lg:flex lg:mb-0 pb-10">
+                            <div className="lg:pl-20 lg:pt-4 font-medium">
+                                <p className="underline text-white">Appellez-nous:</p>
+                                <p className="flex">
+                                    <FaPhoneAlt className="mt-1.5 text-blue-500 h-5 w-5 mr-2" />
+                                    <span className="text-2xl text-white font-semibold">+221 78 895 30 39</span>
+                                </p>
+                            </div>
+                            <span className="p-6 font-medium text-white hidden sm:block">ou</span>
+                            <div className="pt-4 font-medium">
+                                <p className="underline text-white">Envoyez-nous:</p>
+                                <p className="flex">
+                                    <MdEmail className="mt-1.5 text-blue-500 h-5 w-5 mr-2" />
+                                    <span className="text-2xl text-white font-semibold">contact@up-tech.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lg:mt-[-50px] hidden sm:block">
+                        <Image src={mascotte} height={290} />
                     </div>
                 </div>
             </section>
