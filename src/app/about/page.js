@@ -23,7 +23,6 @@ function page() {
         }, 3000);
     }, []);
 
-    /*
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen">
@@ -33,7 +32,7 @@ function page() {
             </div>
         )
     }
-    */
+    
     const contactMethods = [
         {
             icon:
@@ -106,12 +105,11 @@ function page() {
                         </div>
                     </div>
                 </div>
-
-                <div className="lg:mt-[-50px] sm:hidden mb-[-250px] block lg:mb-0">
+                <div className="lg:mt-[-50px] sm:hidden mb-[-250px] block lg:mb-0" data-aos="zoom-out" data-aos-duration="3000">
                     <Image src={mascotte} height={290} />
                 </div>
                 <div className="lg:flex bg-blue-about mt-10 mb-2 bg-cover lg:ml-10 lg:mr-10 ml-2 mr-2">
-                    <div className="lg:ml-20 lg:pt-16 ml-4 pt-56">
+                    <div className="lg:ml-20 lg:pt-16 ml-4 pt-56" data-aos="fade-right" data-aos-duration="3000">
                         <h1 className="lg:pl-20 text-white font-medium text-4xl lg:mb-0 mb-3">Vous voulez <span className="font-bold">nous contactez?</span></h1>
                         <div className="lg:flex lg:mb-0 pb-10">
                             <div className="lg:pl-20 lg:pt-4 font-medium">
@@ -131,7 +129,7 @@ function page() {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:mt-[-50px] hidden sm:block">
+                    <div className="lg:mt-[-50px] hidden sm:block" data-aos="fade-right" data-aos-duration="3000">
                         <Image src={mascotte} height={290} />
                     </div>
                 </div>

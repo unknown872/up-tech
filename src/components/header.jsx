@@ -10,19 +10,14 @@ function Header() {
 
     // Replace javascript:void(0) paths with your paths
     const navigation = [
-        { title: "Accueil", path: "#home" },
-        { title: "À propos", path: "#about" },
-        { title: "Services", path: "#service" },
+        { title: "Accueil", path: "/" },
+        { title: "À propos", path: "/about" },
+        { title: "Services", path: "/services" },
         { title: "Produits", path: "#product" },
-        { title: "Contact", path: "#contact" }
+        { title: "Contact", path: "/contact" }
     ];
 
-    const handleScrollToSection = (id) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    
 
     return (
         <nav className="opacity-85 bg-white lg:border-b lg:border-solid lg:border-slate-400 w-full fixed top-0 left-0 z-50">
@@ -59,14 +54,10 @@ function Header() {
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <li key={idx} data-aos="fade-right" className="text-gray-700 hover:text-blue-500 font-bold text-xl">
+                                    <li key={idx} data-aos="fade-right" className="text-gray-700 hover:text-blue-600 active:text-blue-600 font-bold text-xl">
                                         <a
                                             href={item.path}
                                             className="block"
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                handleScrollToSection(item.path.substring(1));
-                                            }}
                                         >
                                             {item.title}
                                         </a>
