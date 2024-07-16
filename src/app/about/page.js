@@ -75,7 +75,7 @@ function page() {
             <Header />
             <section className="bg-beige">
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
-                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>About</h1>
+                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>A propos</h1>
                 </div>
                 <div className="lg:flex lg:p-20 p-4 gap-x-14">
                     <div className="lg:w-1/2">
