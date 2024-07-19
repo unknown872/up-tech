@@ -11,6 +11,7 @@ import WorkPlan from "@/components/workPlan";
 import Contact from "@/components/contact";
 import Product from "@/components/product";
 import loader from "@/assets/loader.png";
+import Banner from "@/components/banner"
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,6 @@ export default function Home() {
       <Features />
       <About />
       <Service />
-      <Product />
       <WorkPlan />
       <Contact />
       <Footer />

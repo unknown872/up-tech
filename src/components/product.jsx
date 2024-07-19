@@ -8,6 +8,8 @@ import { GiGraduateCap } from "react-icons/gi";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHotel } from "react-icons/fa";
 import { GiMineTruck } from "react-icons/gi";
+import { FaFolderTree } from "react-icons/fa6";
+import { MdComputer } from "react-icons/md";
 
 function Product() {
     const posts = [
@@ -64,15 +66,22 @@ function Product() {
             img: "https://img.freepik.com/photos-gratuite/logistique-transport-porte-conteneurs-avion-cargo-pont-roulant-travail-dans-chantier-naval-au-lever-du-soleil-logistique-import-export-transport-contexte-industrie-ai-generative_123827-24177.jpg?t=st=1720314305~exp=1720317905~hmac=ec4178996d948abe7be5102b59af4a31a34bb9de43ff6875419f0b9d1c350c6f&w=900",
             icon: <GiForklift className='h-24 w-24 border rounded-full pl-5'/>,
             href: "javascript:void(0)"
+        },
+        {
+            title: "Gestion administrative",
+            desc: "The powerful gravity waves resulting from the impact of the planets' moons â€” four in total â€” were finally resolved in 2015 when gravitational microlensing was used to observe the",
+            img: "https://img.freepik.com/photos-gratuite/homme-affaires-graphique-ordinateur-portable_23-2147626527.jpg?t=st=1721412154~exp=1721415754~hmac=4029ec968b2b5dbd1cf34ef5f751793e00136c8cb3a1294591713220e5d281c2&w=900",
+            icon: <MdComputer className='h-24 w-24 border rounded-full p-4'/>,
+            href: "javascript:void(0)"
         }
     ]
 
     return (
         <section className="mx-auto px-4 md:px-8 py-14 bg-beige bg-cover" id="product">
-            <div className="lg:flex py-14">
+            <div className="lg:flex py-4">
                 <div className="lg:w-1/2" data-aos="fade-right">
                     <h1 className='font-semibold text-xl text-blue-950 lg:ml-20'>Nos produits</h1>
-                    <p className='font-extrabold text-blue-950 lg:text-5xl text-3xl lg:ml-20 lg:mt-0 mt-4'>Une multitude de solutions innovantes</p>
+                    <p className='font-extrabold text-blue-950 lg:text-4xl text-3xl lg:ml-20 lg:mt-0 mt-4'>Une multitude de solutions innovantes</p>
                 </div>
                 <div className="lg:w-1/2" data-aos="fade-right">
                     <p className='text-xl text-blue-950 font-medium lg:mt-0 mt-4'>Nous concevons les solutions qui vous permettront de vous démarquer et d’être en phase avec les attentes d’un monde moderne.</p>

@@ -13,7 +13,7 @@ function Header() {
         { title: "Accueil", path: "/" },
         { title: "À propos", path: "/about" },
         { title: "Services", path: "/services" },
-        { title: "Produits", path: "#product" },
+        { title: "Produits", path: "/products" },
         { title: "Contact", path: "/contact" }
     ];
 
