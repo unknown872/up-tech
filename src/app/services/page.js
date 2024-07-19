@@ -100,7 +100,7 @@ function page() {
                                         <p className="text-gray-400 text-lg mt-1">{items.desc}</p>
                                     </div>
                                 </div>
-                                <div className="group-hover:flex group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
+                                <div className="group-hover:flex lg:mb-0 mb-4 group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
                                     <a>Voir plus</a>
                                     <IoIosArrowForward className="mt-1.5" />
                                 </div>
