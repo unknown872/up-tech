@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import { GiForklift } from "react-icons/gi";
 import { FaBuilding } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
@@ -12,6 +13,8 @@ import { FaFolderTree } from "react-icons/fa6";
 import { MdComputer } from "react-icons/md";
 
 function Product() {
+    const [hoveredId, setHoveredId] = useState(null);
+
     const posts = [
         {
             id: 1,
@@ -99,7 +102,14 @@ function Product() {
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 gap">
                 {
                     posts.map((items, key) => (
-                        <article data-aos="zoom-in-down" data-aos-duration="1000" className="max-w-md mx-auto mt-4 group shadow-lg border rounded-md duration-300 hover:shadow-xl hover:shadow-blue-500 bg-white" key={key}>
+                        <article
+                            data-aos="zoom-in-down"
+                            data-aos-duration="1000"
+                            className="max-w-md mx-auto mt-4 group shadow-lg border rounded-md duration-300 hover:shadow-xl hover:shadow-blue-500 bg-white"
+                            key={key}
+                            onMouseEnter={() => setHoveredId(items.id)}
+                            onMouseLeave={() => setHoveredId(null)}
+                        >
                             <a href={items.href}>
                                 <img src={items.img} loading="lazy" alt={items.title} className="w-full h-62 rounded-t-md" />
                                 <div className="relative flex justify-center items-center mt-2 pt-3 ml-4">
@@ -112,11 +122,13 @@ function Product() {
                                         {items.title}
                                     </h3>
                                 </div>
-                                <div className="ml-4 mr-2 mb-3 items-center justify-center flex  hidden group-hover:block">
-                                    <p className='text-center p-4 pt-1'>
-                                        {items.desc}
-                                    </p>
-                                </div>
+                                {hoveredId === items.id && (
+                                    <div className="ml-4 mr-2 mb-3 items-center justify-center flex">
+                                        <a className="bg-blue-300 hover:bg-blue-500 text-white py-2 px-4 rounded-lg">
+                                            En savoir plus
+                                        </a>
+                                    </div>
+                                )}
                             </a>
                         </article>
                     ))

@@ -23,7 +23,7 @@ function Header() {
         <nav className="opacity-85 bg-white lg:border-b lg:border-solid lg:border-slate-400 w-full fixed top-0 left-0 z-50">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block" data-aos="fade-down">
-                    <a href="javascript:void(0)">
+                    <a href="/">
                         <Image 
                             src={logos}
                             width={120}
