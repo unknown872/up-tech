@@ -102,7 +102,7 @@ function page() {
                                 </div>
                                 <div className="group-hover:flex lg:mb-0 mb-4 group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
                                     <a>Voir plus</a>
-                                    <IoIosArrowForward className="mt-1.5" />
+                                    <IoIosArrowForward className="lg:mt-1.5 mt-1" />
                                 </div>
                             </article>
                         ))
