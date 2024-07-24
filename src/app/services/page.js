@@ -12,6 +12,7 @@ import { FaDigitalOcean } from "react-icons/fa";
 import { MdImportantDevices } from "react-icons/md";
 import { SiMarketo } from "react-icons/si";
 import { IoIosArrowForward } from "react-icons/io";
+import Ville from "@/components/ville"
 
 function page() {
     const [loading, setLoading] = useState(true);
@@ -109,6 +110,7 @@ function page() {
                     }
                 </div>
             </section>
+            <Ville/>
             <Footer />
         </div>
     )

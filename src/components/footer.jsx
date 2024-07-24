@@ -14,27 +14,27 @@ function Footer() {
             items: [
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Accueil'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href: '/about',
                     name: 'A propos'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href: '/services',
                     name: 'Services'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href: '/products',
                     name: 'Produits'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href: '/contact',
                     name: 'Contact'
                 },
             ]
@@ -65,7 +65,7 @@ function Footer() {
                 {
                     icon: <FaLocationDot className='h-4 w-4 font-bold'/>,
                     href: 'javascript:void()',
-                    name: 'Cite Khandar, Ouest Foire. No 105 Dakar, Senegal'
+                    name: 'Cite Khandar, Ouest Foire. Villa No 12 Dakar, Senegal'
                 },
                 {
                     icon: <FaPhone className='h4 w-4'/>,
@@ -81,7 +81,7 @@ function Footer() {
         }
     ]
     return (
-        <footer className="pt-10 bg-gray-800 footer-img bg-cover relative">
+        <footer className="pt-10 bg-gray-800 bg-footer bg-cover relative">
             <div className="px-10 md:px-8">
                 <div className="max-w-40 px-4 rounded-md bg-white ml-10" data-aos="fade-down">
                     <a href="javascript:void(0)">
