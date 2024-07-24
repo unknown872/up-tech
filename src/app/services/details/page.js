@@ -1,8 +1,8 @@
 "use client"
+import { useState, useEffect } from 'react';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { IoIosArrowForward } from "react-icons/io";
-import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import loader from "@/assets/loader.png";
 import Image from 'next/image';
