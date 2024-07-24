@@ -35,22 +35,19 @@ function page() {
     const posts = [
         {
             id: 1,
-            icon: <FaDigitalOcean className="w-14 h-14" />
-            ,
+            icon: <FaDigitalOcean className="w-14 h-14" />,
             title: "Transformation digitale",
             desc: "La transformation digitale est essentielle pour les entreprises qui cherchent à rester compétitives dans…"
         },
         {
             id: 2,
-            icon: <MdImportantDevices className="w-14 h-14" />
-            ,
+            icon: <MdImportantDevices className="w-14 h-14" />,
             title: "Web et mobile",
             desc: "Le développement web et mobile de qualité est essentiel pour fournir une expérience utilisateur…"
         },
         {
             id: 3,
-            icon: <SiMarketo className="w-14 h-14" />
-            ,
+            icon: <SiMarketo className="w-14 h-14" />,
             title: "Marketing digital",
             desc: "Amélioration de Votre Croissance Digitale et e-Réputation Si vous avez l’ambition d’accélérer votre croissance…"
         },
@@ -102,7 +99,7 @@ function page() {
                                         <p className="text-gray-400 text-lg mt-1">{items.desc}</p>
                                     </div>
                                 </div>
-                                <Link href={`/services/details?index=${index}`}>
+                                <Link href={`/services/[id]?index=${index}`}>
                                     <div className="group-hover:flex lg:mb-0 mb-4 group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
                                         <a>Voir plus</a>
                                         <IoIosArrowForward className="lg:mt-1.5 mt-1" />
