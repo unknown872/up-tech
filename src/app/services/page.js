@@ -4,18 +4,17 @@ import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import React from 'react'
-import { MdArrowOutward } from "react-icons/md";
-import { GrStatusGood } from "react-icons/gr";
 import loader from "@/assets/loader.png";
 import Image from "next/image";
 import { FaDigitalOcean } from "react-icons/fa";
 import { MdImportantDevices } from "react-icons/md";
 import { SiMarketo } from "react-icons/si";
 import { IoIosArrowForward } from "react-icons/io";
-import Ville from "@/components/ville"
-
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 function page() {
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
 
     useEffect(() => {
         setTimeout(() => {
@@ -85,8 +84,8 @@ function page() {
                 </div>
                 <div className="lg:mx-10 mx-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-10">
                     {
-                        posts.map((items, key) => (
-                            <article className="relative lg:px-8 pt-5 lg:pb-8 bg-white group hover:text-opacity-0 hover:border-none hover:bg-none hover:animate-none cursor-pointer hover:bg-blue-950 hover:bg-opacity-75 mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm" key={key} data-aos="fade-up">
+                        posts.map((items, index) => (
+                            <article className="relative lg:px-8 pt-5 lg:pb-8 bg-white group hover:text-opacity-0 hover:border-none hover:bg-none hover:animate-none cursor-pointer hover:bg-blue-950 hover:bg-opacity-75 mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm" key={index} data-aos="fade-up">
                                 <div className="group hover:border-none hover:bg-none hover:animate-none cursor-default">
                                     <div className="flex items-center justify-center mt-2 pt-3 ml-4 mr-2">
                                         <div className="flex-none border-dashed group-hover:bg-white group-hover:border-none border-2 p-4 rounded-full text-blue-950 border-blue-600 group-hover:animate-bounce">
@@ -95,22 +94,25 @@ function page() {
                                     </div>
                                     <div className="pt-3 ml-4 mr-2 mb-3 text-center">
                                         <h3 className="text-blue-900 text-2xl font-bold group-hover:text-white">
-                                            {items.title}
+                                            <Link href={`/services/details?index=${index}`}>
+                                                {items.title}
+                                            </Link>
                                         </h3>
                                         <div className="bg-blue-500 py-[1.5px] w-6 lg:ml-[136px] ml-[167px] mt-3 mb-3"></div>
                                         <p className="text-gray-400 text-lg mt-1">{items.desc}</p>
                                     </div>
                                 </div>
-                                <div className="group-hover:flex lg:mb-0 mb-4 group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
-                                    <a>Voir plus</a>
-                                    <IoIosArrowForward className="lg:mt-1.5 mt-1" />
-                                </div>
+                                <Link href={`/services/details?index=${index}`}>
+                                    <div className="group-hover:flex lg:mb-0 mb-4 group-hover:bold items-center justify-center text-normal hidden group-hover:block font-semibold mx-[110px] text-white hover:text-blue-500 hover:font-bold hover:flex hover:text-lg">
+                                        <a>Voir plus</a>
+                                        <IoIosArrowForward className="lg:mt-1.5 mt-1" />
+                                    </div>
+                                </Link>
                             </article>
                         ))
                     }
                 </div>
             </section>
-            <Ville/>
             <Footer />
         </div>
     )

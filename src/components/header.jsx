@@ -1,12 +1,14 @@
 "use client";
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import logos from "@/assets/logos.png"
+import { usePathname } from 'next/navigation';
 
 function Header() {
 
     const [state, setState] = useState(false)
+    const pathname = usePathname()
 
     // Replace javascript:void(0) paths with your paths
     const navigation = [
@@ -53,8 +55,13 @@ function Header() {
                     <ul className="justify-end items-center space-y-6 lg:space-x-9 md:flex md:space-x-6 md:space-y-0">
                         {
                             navigation.map((item, idx) => {
+                                const isActive = pathname === item.path;
                                 return (
-                                    <li key={idx} data-aos="fade-right" className="text-gray-700 hover:text-blue-600 active:text-blue-600 font-bold text-xl">
+                                    <li 
+                                        key={idx} 
+                                        data-aos="fade-right" 
+                                        className={`text-xl font-bold ${isActive ? 'text-blue-600 bg-none' : 'text-gray-700 hover:text-blue-600'}`}
+                                    >
                                         <a
                                             href={item.path}
                                             className="block"

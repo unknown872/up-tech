@@ -2,12 +2,24 @@
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { IoIosArrowForward } from "react-icons/io";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import loader from "@/assets/loader.png";
+import Image from 'next/image';
 
 function page() {
+    const searchParams = useSearchParams();
+    const index = searchParams.get('index');
+    const [loading, setLoading] = useState(true);
 
-    const [selectedVilleIndex, setSelectedVilleIndex] = useState(0);
+    const [selectedVilleIndex, setSelectedVilleIndex] = useState(index ? parseInt(index) : 0);
     const [showFullDescription, setShowFullDescription] = useState(false);
+
+    useEffect(() => {
+        if (index !== null) {
+            setSelectedVilleIndex(parseInt(index));
+        }
+    }, [index]);
 
     const handleReadMore = () => {
         setShowFullDescription(!showFullDescription);
@@ -18,6 +30,11 @@ function page() {
     };
 
     const Villes = [
+        {
+            titre: "Transformation digitale",
+            description: `La transformation digitale est essentielle pour les entreprises qui cherchent à rester compétitives dans un marché en constante évolution. En effet, cette transformation permet de mieux répondre aux attentes des clients, d’améliorer l’efficacité opérationnelle et de développer de nouveaux produits et services.
+Notre entreprise offre une gamme de solutions pour aider les entreprises à réussir leur transformation digitale. Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et proposer des solutions sur mesure qui répondent à leurs objectifs.`
+        },
         {
             titre: "Web et mobile",
             description: `Le développement web et mobile de qualité est essentiel pour fournir une expérience utilisateur optimale. Que ce soit pour la création d’un site web ou d’une application mobile, il est important de suivre des pratiques de développement pour garantir la qualité de votre produit final. 
@@ -31,11 +48,6 @@ Optimisez votre application pour des temps de chargement rapides et une expérie
 Il est également important de garder votre application à jour. Les applications web et mobiles sont en constante évolution. Assurez-vous que votre application est régulièrement mise à jour pour offrir de nouvelles fonctionnalités, corriger les bogues et améliorer l’expérience utilisateur.
 
 Enfin, l’utilisation de pratiques de développement agiles permet un développement rapide et flexible tout en garantissant la qualité de votre application. En suivant ces pratiques, vous pouvez garantir la qualité de votre développement web et mobile, offrir une expérience utilisateur optimale et rester compétitif sur le marché.`
-        },
-        {
-            titre: "Transformation digitale",
-            description: `La transformation digitale est essentielle pour les entreprises qui cherchent à rester compétitives dans un marché en constante évolution. En effet, cette transformation permet de mieux répondre aux attentes des clients, d’améliorer l’efficacité opérationnelle et de développer de nouveaux produits et services.
-Notre entreprise offre une gamme de solutions pour aider les entreprises à réussir leur transformation digitale. Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et proposer des solutions sur mesure qui répondent à leurs objectifs.`
         },
         {
             titre: "Marketing digital",
@@ -54,6 +66,22 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
         }
     ];
 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 3000);
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="">
+                    <Image src={loader} width={120} height={120} alt="Loading" className="animate-bounce" />
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div>
             <Header />
@@ -67,11 +95,11 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                         <div className='mt-6'>
                             {Villes.map((ville, index) => (
                                 <div
-                                    className={`mb-1 flex justify-between group bg-white text-lg text-blue-900 font-semibold cursor-pointer p-4 ${selectedVilleIndex === index ? 'bg-red-900 text-white' : 'hover:text-white hover:bg-blue-900'
+                                    className={`mb-1 flex justify-between group bg-white text-lg text-blue-900 font-semibold cursor-pointer p-4 ${selectedVilleIndex === index ? 'bg-blue-900 text-white' : 'hover:text-white hover:bg-blue-900'
                                         }`}
                                     key={index}
                                     onClick={(e) => {
-                                        setSelectedVilleIndex(index, ville);
+                                        setSelectedVilleIndex(index);
                                         setShowFullDescription(false);
                                     }}
                                 >
