@@ -95,7 +95,7 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                         <div className='mt-6 w-full'>
                             {Villes.map((ville, index) => (
                                 <div
-                                    className={`mb-1 flex justify-between group bg-white text-lg text-blue-900 font-semibold cursor-pointer p-4 ${selectedVilleIndex === index ? 'bg-blue-900 text-white' : 'hover:text-white hover:bg-blue-900'
+                                    className={`mb-1 flex justify-between group font-semibold cursor-pointer p-4 ${selectedVilleIndex === index ? 'bg-blue-900 text-white' : 'bg-white text-lg text-blue-900 hover:text-white hover:bg-blue-900'
                                         }`}
                                     key={index}
                                     onClick={(e) => {
