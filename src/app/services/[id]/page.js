@@ -87,12 +87,12 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
             <Header />
             <section className='bg-beige bg-cover'>
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
-                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>Services</h1>
+                    <h1 className='text-center lg:text-6xl text-4xl text-white font-bold'>{Villes[selectedVilleIndex].titre}</h1>
                 </div>
-                <div class="grid grid-cols-3 gap-4 px-14 py-8">
-                    <div class="border-t-[6px] border-blue-600 m-6 mx-10">
+                <div class="grid lg:grid-cols-3 lg:gap-4 lg:px-14 lg:py-8 mt-8 pb-8">
+                    <div class="border-t-[6px] border-blue-600 lg:m-6 m-4 lg:mx-10 w-[380px] lg:w-[300px]">
                         <h1 className='mt-4 text-2xl font-bold text-blue-900'>Nos services</h1>
-                        <div className='mt-6'>
+                        <div className='mt-6 w-full'>
                             {Villes.map((ville, index) => (
                                 <div
                                     className={`mb-1 flex justify-between group bg-white text-lg text-blue-900 font-semibold cursor-pointer p-4 ${selectedVilleIndex === index ? 'bg-blue-900 text-white' : 'hover:text-white hover:bg-blue-900'
@@ -110,13 +110,13 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                             ))}
                         </div>
                     </div>
-                    <div class="col-span-2 m-2 pl-10">
+                    <div class="col-span-2 lg:m-2 m-4 lg:pl-10" id='contenu'>
                         <h1 className='text-4xl text-blue-900 font-bold'>Digital pour tous et partout</h1>
                         <div>
                             {selectedVilleIndex !== null && (
                                 <div className='mt-6'>
                                     <div className='text-black'>
-                                        <pre className='whitespace-pre-wrap text-sm font-sans text-blue-950'>
+                                        <pre className='whitespace-pre-wrap text-normal font-sans text-blue-950' data-aos="fade-right">
                                             {Villes[selectedVilleIndex].description}
                                         </pre>
                                     </div>

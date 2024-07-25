@@ -44,17 +44,17 @@ function Footer() {
             items: [
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href:"/services/[id]?index=0",
                     name: 'Transformation digitale'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href:"/services/[id]?index=1",
                     name: 'Web et mobile'
                 },
                 {
                     icon: <AiOutlineLine className='h-4 w-4' />,
-                    href: 'javascript:void()',
+                    href:"/services/[id]?index=2",
                     name: 'Marketing digital'
                 }
             ]
@@ -70,12 +70,12 @@ function Footer() {
                 {
                     icon: <FaPhone className='h4 w-4'/>,
                     href: 'javascript:void()',
-                    name: '+221 77 095 75 60'
+                    name: '+221 78 895 30 39'
                 },
                 {
                     icon: <FaEnvelope className='h-4 w-4'/>,
                     href: 'javascript:void()',
-                    name: 'contact@utili-Tech.sn'
+                    name: 'contact@contact.sn'
                 },
             ],
         }

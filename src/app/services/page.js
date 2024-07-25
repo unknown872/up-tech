@@ -92,7 +92,6 @@ function page() {
                                     <div className="pt-3 ml-4 mr-2 mb-3 text-center">
                                         <h3 className="text-blue-900 text-2xl font-bold group-hover:text-white">
                                             {items.title}
-                                            
                                         </h3>
                                         <div className="bg-blue-500 py-[1.5px] w-6 lg:ml-[136px] ml-[167px] mt-3 mb-3"></div>
                                         <p className="text-gray-400 text-lg mt-1">{items.desc}</p>
