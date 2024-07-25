@@ -104,8 +104,8 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                                     }}
                                 >
                                     {ville.titre}
-                                    <IoIosArrowForward className="w-5 h-5 ml-2 mt-1.5 hidden group-hover:block"/>
-                                    {selectedVilleIndex === index && <IoIosArrowForward className="w-5 h-5 ml-2 mt-1.5 group-hover:hidden"/>}
+                                    <IoIosArrowForward className="w-5 h-5 ml-2 mt-1.5 hidden group-hover:block" />
+                                    {selectedVilleIndex === index && <IoIosArrowForward className="w-5 h-5 ml-2 mt-1.5 group-hover:hidden" />}
                                 </div>
                             ))}
                         </div>

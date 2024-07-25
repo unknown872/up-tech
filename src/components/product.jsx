@@ -124,7 +124,10 @@ function Product() {
                                 </div>
                                 {hoveredId === items.id && (
                                     <div className="ml-4 mr-2 mb-3 items-center justify-center flex">
-                                        <a className="bg-blue-300 hover:bg-blue-500 text-white py-2 px-4 rounded-lg">
+                                        <a
+                                            className="bg-blue-300 hover:bg-blue-500 text-white py-2 px-4 rounded-lg"
+                                            href={`/products/[id]?index=${key}`}
+                                        >
                                             En savoir plus
                                         </a>
                                     </div>
