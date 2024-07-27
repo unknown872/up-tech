@@ -13,6 +13,7 @@ import Swal from "sweetalert2";
 function page() {
     const [loading, setLoading] = useState(true);
     const [responseMessage, setResponseMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const [formData, setFormData] = useState({
         firstname: '',
@@ -31,6 +32,7 @@ function page() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         try {
             const response = await fetch('/api/message', {
@@ -45,9 +47,9 @@ function page() {
             if (response.ok) {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Message sent successfully!',
-                    showConfirmButton: false,
-                    timer: 1500
+                    title: 'Votre message a été bien reçu!',
+                    text:'Nous reviendrons vers vous dans les plus brefs délais',
+                    showConfirmButton: true 
                 });
                 setFormData({
                     firstname: '',
@@ -59,18 +61,19 @@ function page() {
             } else {
                 Swal.fire({
                     icon: 'error',
-                    title: `Error: ${result.error}`,
-                    showConfirmButton: false,
-                    timer: 1500
+                    title: `Erreur: ${result.error}`,
+                    text: "Votre message n'a pas pu être transmis", 
+                    showConfirmButton: true
                 });
             }
         } catch (error) {
             Swal.fire({
                 icon: 'error',
                 title: 'An unexpected error occurred.',
-                showConfirmButton: false,
-                timer: 1500
+                showConfirmButton: true
             });
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -244,8 +247,15 @@ function page() {
                                     data-aos="fade-up"
                                     data-aos-duration="3000"
                                 >
-                                    <span>Envoyer</span>
-                                    <GrStatusGood className='h-7 w-7 ml-2' />
+                                    {isLoading ? (
+                                        "En cours d'envoie..."
+                                    )
+                                        :
+                                        <div className="flex">
+                                            <span>Envoyer</span>
+                                            <GrStatusGood className='h-7 w-7 ml-2' />
+                                        </div>
+                                    }
                                 </button>
                             </form>
                         </div>
