@@ -1,9 +1,78 @@
-import React from 'react'
-import AOS from 'aos';
+"use client"
+import { useEffect, useState } from "react";;
 import 'aos/dist/aos.css';
 import { MdArrowOutward } from "react-icons/md";
+import Swal from "sweetalert2";
+import { GrStatusGood } from "react-icons/gr";
+import loader from "@/assets/loader.png";
 
 function Contact() {
+    const [loading, setLoading] = useState(true);
+    const [responseMessage, setResponseMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [formData, setFormData] = useState({
+        firstname: '',
+        lastname: '',
+        email: '',
+        tel: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        try {
+            const response = await fetch('/api/message', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Votre message a été bien reçu!',
+                    text: 'Nous reviendrons vers vous dans les plus brefs délais',
+                    showConfirmButton: true
+                });
+                setFormData({
+                    firstname: '',
+                    lastname: '',
+                    email: '',
+                    tel: '',
+                    message: ''
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: `Erreur: ${result.error}`,
+                    text: "Votre message n'a pas pu être transmis",
+                    showConfirmButton: true
+                });
+            }
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'An unexpected error occurred.',
+                showConfirmButton: true
+            });
+        } finally {
+            setIsLoading(false);
+        }
+    }
+
     const contactMethods = [
         {
             icon:
@@ -72,9 +141,13 @@ function Contact() {
                         </h1>
                         <p className='mt-4 font-medium text-lg text-gray-600'>Prêt à démarrer votre projet ? Vous pouvez nous contacter en remplissant le formulaire ci dessous.</p>
                     </div>
-                    <div className="mt-12 max-w-xl" data-aos="fade-right" data-aos-duration="500">
+                    <div
+                        className="mt-12 max-w-xl"
+                        data-aos="fade-right"
+                        data-aos-duration="500">
                         <form
                             className="space-y-5"
+                            onSubmit={handleSubmit}
                         >
                             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
                                 <div>
@@ -83,6 +156,9 @@ function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="firstname"
+                                        value={formData.firstname}
+                                        onChange={handleChange}
                                         required
                                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
                                     />
@@ -93,6 +169,9 @@ function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="lastname"
+                                        value={formData.lastname}
+                                        onChange={handleChange}
                                         required
                                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
                                     />
@@ -104,6 +183,9 @@ function Contact() {
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     required
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
                                 />
@@ -113,7 +195,10 @@ function Contact() {
                                     Telephone
                                 </label>
                                 <input
-                                    type="email"
+                                    type="tel"
+                                    name="tel"
+                                    value={formData.tel}
+                                    onChange={handleChange}
                                     required
                                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
                                 />
@@ -122,15 +207,29 @@ function Contact() {
                                 <label className="font-bold text-lg">
                                     Message
                                 </label>
-                                <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"></textarea>
+                                <textarea
+                                    required
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg">
+                                </textarea>
                             </div>
                             <button
+                                type="submit"
                                 className="flex px-10 py-6 text-white text-xl font-medium  bg-blue-600 hover:bg-blue-500 active:bg-blue-600 rounded-lg duration-150 shadow-3xl"
                                 data-aos="fade-up"
                                 data-aos-duration="3000"
                             >
-                                <span>Envoyer</span>
-                                <MdArrowOutward className='h-7 w-7' />
+                                {isLoading ? (
+                                    "En cours d'envoie..."
+                                )
+                                    :
+                                    <div className="flex">
+                                        <span>Envoyer</span>
+                                        <GrStatusGood className='h-7 w-7 ml-2' />
+                                    </div>
+                                }
                             </button>
                         </form>
                     </div>
