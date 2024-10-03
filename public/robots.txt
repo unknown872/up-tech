@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://uptechnologie-corpororation.com/
+
+# Sitemaps
+Sitemap: https://uptechnologie-corpororation.com/sitemap.xml
