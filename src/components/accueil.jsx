@@ -12,11 +12,12 @@ function Accueil() {
         <section id="home" className="overflow-hidden py-64 px-4 bg-cover md:px-8 image-bg" data-aos="zoom-out" data-aos-duration="2000">
             <div className="text-center relative">
                 <div className="">
+                    <h3 className='text-gray-700 font-extrabold mb-2'>UP-TECH</h3>
                     <h1 className="text-4xl whitespace-nowrap text-center lg:text-6xl sm:text-2xl font-extrabold md:text-4xl text-blue-500" data-aos="fade-up" data-aos-duration="2000">
                         Solutions innovantes
                     </h1>
-                    <p className="text-gray-700 text-center justify-center items-center px-14 whitespace-pre-line font-medium leading-relaxed animate-fadein500 mt-3 lg:text-2xl" data-aos="fade-up" data-aos-duration="3000">
-                    Notre agence web est capable de répondre à tous vos besoins et d'élaborer une véritable stratégie adaptée à vos besoins selon votre domaine d'activité
+                    <p className="text-gray-700 text-center justify-center items-center px-14 whitespace-pre-line font-medium leading-relaxed animate-fadein500 mt-3 lg:text-xl" data-aos="fade-up" data-aos-duration="3000">
+                        Notre agence web est capable de répondre à tous vos besoins et d'élaborer une véritable stratégie adaptée à vos besoins selon votre domaine d'activité
                     </p>
                 </div>
                 <div className="lg:mt-5 mt-8 items-center justify-center gap-3 sm:flex" data-aos="fade-right" data-aos-duration="3000">
