@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .image-bg {
-	background-image: url(https://img.freepik.com/photos-gratuite/close-up-mains-hommes-utilisant-ordinateur-portable-maison_1150-790.jpg?t=st=1719857756~exp=1719861356~hmac=84a177ae01b413688c622d803c737c8ba2f17d7894dddc82c214e9d50b579f3e&w=900);
+  background-image: url(https://img.freepik.com/photos-gratuite/close-up-mains-hommes-utilisant-ordinateur-portable-maison_1150-790.jpg?t=st=1719857756~exp=1719861356~hmac=84a177ae01b413688c622d803c737c8ba2f17d7894dddc82c214e9d50b579f3e&w=900);
 }
 
-.service-bg{
+.service-bg {
   background-image: url(https://img.freepik.com/photos-gratuite/concept-papier-peint-beton-colore-texture_53876-31799.jpg?t=st=1719931478~exp=1719935078~hmac=1f33776b9321ae5aea57c3152e53f373b36e34a56e8ffb922000711f6c2b726c&w=900);
 }
 
-.work-plan{
+.work-plan {
   background-image: url(https://img.freepik.com/photos-gratuite/fond-3d-cubes-blancs_23-2150472996.jpg?t=st=1719958160~exp=1719961760~hmac=5f7da745a95605231777044b6088a391196d6abd43b436073b63925eb55c37ad&w=900);
 }
 
@@ -18,25 +20,26 @@
   background-image: url(https://img.freepik.com/vecteurs-libre/abstrait-texture-fond-illustration_53876-25861.jpg?t=st=1720740067~exp=1720743667~hmac=9efea8101eaaccbd50ac40de070b17fdec45a8311fc18cd4732608947984611b&w=740);
 }
 
-.bg-cards{
+.bg-cards {
   background-image: url(https://img.freepik.com/photos-premium/design-fond-creatif-abstrait-bleu-fonce-oxford_851755-194918.jpg?w=1060);
 }
 
-.bg-beige{
+.bg-beige {
   background-image: url(https://img.freepik.com/photos-gratuite/fond-texture-papier-espace-design_53876-41739.jpg?t=st=1720364480~exp=1720368080~hmac=8df053f5ab52a5eb643828b65e8dcb8b81dff78c9d4d3095acbd95a017926224&w=900);
 }
 
-.bg-contact{
+.bg-contact {
   background-image: url(https://img.freepik.com/vecteurs-libre/fond-connexion-reseau-degrade_23-2148865393.jpg?t=st=1720814853~exp=1720818453~hmac=4df25a1e2a03878fdde01734857e5c056fb9677f0e3f4879bcad9b778a71ba55&w=900);
 }
 
-.bg-about{
+.bg-about {
   background-image: url(https://img.freepik.com/photos-gratuite/variete-personnes-multitaches-dans-scene-dessin-anime-3d_23-2151294554.jpg?t=st=1720822605~exp=1720826205~hmac=d3aad4ad95b5d0a731efda91400fd86f2e6b56deb53da18952cd7f2567dbf08b&w=1060);
 }
 
-.bg-blue-about{
+.bg-blue-about {
   background-image: url(https://img.freepik.com/photos-gratuite/fond-ecran-colore-flou-artistique_58702-9993.jpg?t=st=1721064517~exp=1721068117~hmac=b250404d9690a290be500e20c9389952e724ec44bd9e15b7e59113c226657fed&w=900);
 }
-.bg-footer{
+
+.bg-footer {
   background-image: url(https://img.freepik.com/vecteurs-libre/fond-vecteur-realiste-ciel-nocturne-bleu-etoiles-brillantes-scintillantes_134830-1386.jpg?t=st=1721779942~exp=1721783542~hmac=6651d221a1a1c4e3529363bc7eb6455339177e908c04786d962c808d8bda1684&w=1060);
 }

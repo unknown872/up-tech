@@ -13,6 +13,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import mascotte from "@/assets/mascotte.png"
+import { Helmet } from "react-helmet";
 
 function page() {
     const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ function page() {
             </div>
         )
     }
-    
+
     const contactMethods = [
         {
             icon:
@@ -71,7 +72,16 @@ function page() {
     ];
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>À propos de nous - UP-TECH</title>
+                <meta name="description" content="Découvrez UP-TECH, votre partenaire stratégique pour la transformation digitale. Nous concevons des solutions sur mesure en développement de logiciels, fintech, et plus." />
+                <meta name="keywords" content="UP-TECH, UP TECHNOLOGIE CORPORATION, À propos, transformation digitale, développement de logiciels, fintech, solutions sur mesure" />
+                <meta property="og:title" content="À propos de UP-TECH" />
+                <meta property="og:description" content="En savoir plus sur UP-TECH, nos services et notre engagement envers l'innovation et la transformation digitale." />
+                <meta property="og:image" content="/assets/logos.png" /> {/* Lien vers une image de prévisualisation sur les réseaux sociaux */}
+                <meta property="og:url" content="https://uptechnologie-corpororation.com/about" /> {/* Ton URL ici */}
+            </Helmet>
             <Header />
             <section className="bg-beige">
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
@@ -80,43 +90,43 @@ function page() {
                 <div className="lg:flex lg:p-20 p-4 gap-x-14">
                     <div className="lg:w-1/2">
                         <div data-aos="fade-right" data-aos-duration="300" className='lg:mt-0 mt-8'>
-                            <h1 className="font-bold text-lg text-gray-600 animate-slidein">
+                            <h2 className="font-bold text-lg text-gray-600 animate-slidein">
                                 Qui sommes-nous?
-                            </h1>
+                            </h2>
                             <p className='mt-4 font-bold text-2xl text-blue-950'>
-                                Partenaire stratégique de votre transformation digitale
+                                Votre partenaire pour réussir votre transition vers le digital
                             </p>
                         </div>
                         <div className='mt-4 text-gray-700'>
                             <p className="" data-aos="fade-right">
-                                <span className="font-bold text-cyan-950">Up-Tech</span> est spécialisée dans la conception et le développement de logiciels sur mesure, la transformation digitale et la fintech.
+                                <span className="font-bold text-cyan-950">UP Technologie Corporation</span> est spécialisée dans la conception et le développement de logiciels sur mesure, la transformation digitale et la fintech.
                             </p>
                             <p className="mt-3" data-aos="fade-right">
-                                Notre entreprise a été fondée avec l’objectif de fournir des solutions technologiques personnalisées pour répondre aux besoins spécifiques de nos clients, en utilisant les dernières technologies et les meilleures pratiques de l’industrie.
+                                Grâce à notre expertise et à notre maîtrise des dernières technologies, nous concevons des solutions sur mesure pour répondre à vos besoins spécifiques et vous aider à atteindre vos objectifs.
                             </p>
                             <p className="mt-3" data-aos="fade-right">
-                                Nous avons une équipe d’experts en développement de logiciels, d’architectes, de designers UX/UI et de consultants en transformation digitale, qui travaillent en étroite collaboration avec nos clients pour comprendre leurs besoins et leur fournir des solutions innovantes et efficaces.
+                                Notre équipe multidisciplinaire, composée d'experts en développement, d'architectes, de designers UX/UI et de consultants, travaille main dans la main avec vous pour concevoir des solutions digitales sur mesure, parfaitement adaptées à vos besoins spécifiques.
                             </p>
                         </div>
                     </div>
                     <div className="lg:w-1/2 lg:p-10">
                         <div className="lg:pt-16 pt-10" data-aos="zoom-out" data-aos-duration="3000">
-                            <Image src={project} />
+                            <Image src={project} alt="Illustration Equipe UP-TECH" loading="lazy"/>
                         </div>
                     </div>
                 </div>
                 <div className="lg:mt-[-50px] sm:hidden mb-[-250px] block lg:mb-0" data-aos="zoom-out" data-aos-duration="3000">
-                    <Image src={mascotte} height={290} />
+                    <Image src={mascotte} height={290} alt="Mascotte UP-TECH" loading="lazy"/>
                 </div>
                 <div className="lg:flex bg-blue-about mt-10 mb-2 bg-cover lg:ml-10 lg:mr-10 ml-2 mr-2">
-                    <div className="lg:ml-20 lg:pt-16 ml-4 pt-56" data-aos="fade-right" data-aos-duration="3000">
-                        <h1 className="lg:pl-20 text-white font-medium text-4xl lg:mb-0 mb-3">Vous voulez <span className="font-bold">nous contactez?</span></h1>
+                <div className="lg:ml-5 lg:pt-16 ml-4 pt-56" data-aos="fade-right" data-aos-duration="3000">
+                        <h1 className="lg:pl-5 text-white font-medium text-4xl lg:mb-0 mb-3">N'hésitez pas à <span className="font-bold">nous contacter</span></h1>
                         <div className="lg:flex lg:mb-0 pb-10">
-                            <div className="lg:pl-20 lg:pt-4 font-medium">
+                            <div className="lg:pl-5 lg:pt-4 font-medium">
                                 <p className="underline text-white">Appellez-nous:</p>
                                 <p className="flex">
                                     <FaPhoneAlt className="mt-1.5 text-blue-500 h-5 w-5 mr-2" />
-                                    <span className="text-2xl text-white font-semibold">+221 78 895 30 39</span>
+                                    <span className="text-xl text-white font-semibold">+221 78 895 30 39 / 77 095 75 60</span>
                                 </p>
                             </div>
                             <span className="p-6 font-medium text-white hidden sm:block">ou</span>
@@ -124,18 +134,18 @@ function page() {
                                 <p className="underline text-white">Envoyez-nous:</p>
                                 <p className="flex">
                                     <MdEmail className="mt-1.5 text-blue-500 h-5 w-5 mr-2" />
-                                    <span className="text-2xl text-white font-semibold">contact@up-tech.com</span>
+                                    <span className="text-xl text-white font-semibold">uptechnologiecorporation@gmail.com</span>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="lg:mt-[-50px] hidden sm:block" data-aos="fade-right" data-aos-duration="3000">
-                        <Image src={mascotte} height={290} />
+                        <Image src={mascotte} height={290} alt="Mascotte UP-TECH" loading="lazy"/>
                     </div>
                 </div>
             </section>
             <Footer />
-        </div>
+        </>
     )
 }
 

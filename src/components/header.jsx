@@ -22,19 +22,21 @@ function Header() {
     
 
     return (
-        <nav className="opacity-85 bg-white lg:border-b lg:border-solid lg:border-slate-400 w-full fixed top-0 left-0 right-0 z-50">
+        <nav className="opacity-55 bg-white lg:border-b lg:border-solid lg:border-slate-400 w-full fixed top-0 left-0 right-0 z-50" aria-label="Menu principal">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block" data-aos="fade-down">
-                    <a href="/">
+                    <a href="/" aria-label="Retour à la page d'accueil">
                         <Image 
                             src={logos}
                             width={120}
                             height={50}
-                            alt="Float UI logo"
+                            alt="Logo de UP-TECH"
+                            priority
                         />
                     </a>
                     <div className="md:hidden">
-                        <button className="text-gray-500 hover:text-gray-800"
+                        <button className="text-gray-500 hover:text-gray-800" 
+                            aria-label="Ouvrir le menu"
                             onClick={() => setState(!state)}
                         >
                             {
@@ -51,7 +53,7 @@ function Header() {
                         </button>
                     </div>
                 </div>
-                <div className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'}`}>
+                <div className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'} transition-transform duration-300 ease-in-out`}>
                     <ul className="justify-end items-center space-y-6 lg:space-x-9 md:flex md:space-x-6 md:space-y-0">
                         {
                             navigation.map((item, idx) => {
@@ -64,6 +66,8 @@ function Header() {
                                     >
                                         <a
                                             href={item.path}
+                                            aria-current={isActive ? "page" : undefined}
+                                            aria-label={`Naviguer vers ${item.title}`}
                                             className="block"
                                         >
                                             {item.title}

@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useSearchParams } from 'next/navigation';
 import loader from "@/assets/loader.png";
 import Image from 'next/image';
+import { Helmet } from 'react-helmet';
 
 function page() {
     const searchParams = useSearchParams();
@@ -83,7 +84,12 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
     }
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Details Services - UP-TECH</title>
+                <meta name="description" content="Découvrez nos services de transformation digitale, développement web et marketing digital." />
+                <meta name="keywords" content="transformation digitale, développement web, marketing digital, services informatiques" />              
+            </Helmet>
             <Header />
             <section className='bg-beige bg-cover'>
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
@@ -91,7 +97,7 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                 </div>
                 <div class="grid lg:grid-cols-3 lg:gap-4 lg:px-14 lg:py-8 mt-8 pb-8">
                     <div class="border-t-[6px] border-blue-600 lg:m-6 m-4 lg:mx-10 w-[380px] lg:w-[300px]">
-                        <h1 className='mt-4 text-2xl font-bold text-blue-900'>Nos services</h1>
+                        <h2 className='mt-4 text-2xl font-bold text-blue-900'>Nos services</h2>
                         <div className='mt-6 w-full'>
                             {Villes.map((ville, index) => (
                                 <div
@@ -102,6 +108,8 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                                         setSelectedVilleIndex(index);
                                         setShowFullDescription(false);
                                     }}
+                                    aria-expanded={selectedVilleIndex === index}
+                                    aria-controls={`description-${index}`}
                                 >
                                     {ville.titre}
                                     <IoIosArrowForward className="w-5 h-5 ml-2 mt-1.5 hidden group-hover:block" />
@@ -111,7 +119,7 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                         </div>
                     </div>
                     <div class="col-span-2 lg:m-2 m-4 lg:pl-10" id='contenu'>
-                        <h1 className='text-4xl text-blue-900 font-bold'>Digital pour tous et partout</h1>
+                        <h3 className='text-4xl text-blue-900 font-bold'>Digital pour tous et partout</h3>
                         <div>
                             {selectedVilleIndex !== null && (
                                 <div className='mt-6'>
@@ -127,7 +135,7 @@ En somme, notre solution de marketing digital est conçue pour aider les entrepr
                 </div>
             </section>
             <Footer />
-        </div>
+        </>
     )
 }
 

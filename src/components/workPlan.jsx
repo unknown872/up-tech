@@ -33,7 +33,7 @@ function WorkPlan() {
             <div className='justify-center items-center text-center'>
                 <div className='flex justify-center'>
                     <AiOutlineLine className='h-6 w-6 mt-1' data-aos="fade-down"/>
-                    <h1 className='text-xl font-medium text-blue-950 px-2' data-aos="fade-up">Process</h1>
+                    <h2 className='text-xl font-medium text-blue-950 px-2' data-aos="fade-up">Process</h2>
                     <AiOutlineLine className='h-6 w-6 mt-1' data-aos="fade-down"/>
                 </div>
                 <p className='text-4xl font-bold text-blue-950 mt-2' data-aos="fade-right" data-aos-duration="2000">Notre méthodologie de travail</p>
@@ -48,9 +48,9 @@ function WorkPlan() {
                                     <div className="mr-4 ml-5">
                                         {item.id}
                                     </div>
-                                    <h4 className="text-blue-950 font-bold text-2xl ml-4">
+                                    <h3 className="text-blue-950 font-bold text-2xl ml-4">
                                         {item.title}
-                                    </h4>
+                                    </h3>
                                 </li>
                             ))
                         }

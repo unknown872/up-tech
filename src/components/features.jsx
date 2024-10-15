@@ -29,13 +29,13 @@ function Features() {
                     <ul className="grid gap-x-12 divide-y [&>.feature-1]:pl-0 sm:grid-cols-2 sm:gap-y-8 sm:divide-y-0 lg:divide-x lg:grid-cols-3 lg:gap-x-0">
                         {
                             features.map((item, idx) => (
-                                <li data-aos="fade-down" data-aos-duration="3000" key={idx} className={`feature-${idx + 1} space-y-3 py-8 lg:px-12 sm:py-0`}>
-                                    <div data-aos="fade-right" data-aos-duration="4000" className="w-12 h-12 border text-blue-600 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <li data-aos="fade-down" aria-label={`Fonctionnalité: ${item.title}`} data-aos-duration="3000" key={idx} className={`feature-${idx + 1} space-y-3 py-8 lg:px-12 sm:py-0`}>
+                                    <div data-aos="fade-right" data-aos-duration="4000" className="w-12 h-12 border text-blue-600 bg-blue-100 rounded-xl flex items-center justify-center" aria-label={item.title}>
                                         {item.icon}
                                     </div>
-                                    <h4 data-aos="fade-right" data-aos-duration="5000" className="text-gray-800 font-bold lg:text-3xl text-2xl">
+                                    <h3 data-aos="fade-right" data-aos-duration="5000" className="text-gray-800 font-bold lg:text-3xl text-2xl">
                                         {item.title}
-                                    </h4>
+                                    </h3>
                                     <p className='font-semibold' data-aos="fade-right" data-aos-duration="5000">
                                         {item.desc}
                                     </p>

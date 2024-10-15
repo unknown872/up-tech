@@ -29,7 +29,8 @@ function Service() {
         {
             icon: <FaRoadBridge className='h-8 w-8' />,
             title: "Logistique"
-        }, {
+        }, 
+        {
             icon: <FaBus className='h-8 w-8' />,
             title: "Transport"
         },
@@ -65,11 +66,11 @@ function Service() {
         <section id="service" className="py-20 bg-cover relative service-bg">
             <div className="lg:flex py-10">
                 <div className="lg:w-1/2 p-4 pt-2" data-aos="fade-right">
-                    <h1 className='font-semibold whitespace-pre-line text-xl text-white lg:ml-20 '>Domaine d'intervention ➖</h1>
+                    <h2 className='font-semibold whitespace-pre-line text-xl text-white lg:ml-20 '>Domaine d'intervention ➖</h2>
                     <p className='font-extrabold whitespace-pre-line text-white lg:text-5xl text-3xl lg:ml-20 mt-4'>Digitalisation de services</p>
                 </div>
                 <div className="lg:w-1/2 p-4 pb-0" data-aos="fade-right">
-                    <p className='text-xl text-white'>Nous vous accompagnons dans la conception, la réalisation et la <br /> transformation digitale de votre société</p>
+                    <p className='text-xl text-white'>Nous sommes à vos côtés pour vous aider à transformer votre entreprise et à relever les défis du numérique.</p>
                 </div>
             </div>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
@@ -77,8 +78,8 @@ function Service() {
                     <ul className="lg:mt-6 mt-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         {
                             features.map((item, idx) => (
-                                <li key={idx} data-aos="fade-up" data-aos-duration="3000" className='border lg:py-6 pl-0 lg:px-4 py-2 px-2 cursor-default bg-white flex items-center hover:bg-blue-950 hover:border-none text-blue-950 hover:text-white ml-2 mr-2'>
-                                    <div className="w-20 h-20 bg-blue-950 border text-white rounded-full flex items-center justify-center lg:ml-0 ml-2 p-4">
+                                <li key={item.title} data-aos="fade-up" data-aos-duration="3000" className='border lg:py-6 pl-0 lg:px-4 py-2 px-2 cursor-default bg-white flex items-center hover:bg-blue-950 hover:border-none text-blue-950 hover:text-white ml-2 mr-2'>
+                                    <div aria-label={item.title} className="w-20 h-20 bg-blue-950 border text-white rounded-full flex items-center justify-center lg:ml-0 ml-2 p-4">
                                         {item.icon}
                                     </div>
                                     <h4 className="font-bold lg:text-3xl text-xl ml-2">

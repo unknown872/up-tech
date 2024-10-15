@@ -6,6 +6,7 @@ import Footer from '@/components/footer'
 import React from 'react'
 import Image from "next/image";
 import loader from "@/assets/loader.png";
+import { Helmet } from 'react-helmet'
 
 function page() {
     const [loading, setLoading] = useState(true);
@@ -27,7 +28,16 @@ function page() {
     }
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Produits - UP-TECH</title>
+                <meta name="description" content="Découvrez les produits innovants de UP-TECH, conçus pour accompagner votre transformation digitale avec des solutions sur mesure à Dakar." />
+                <meta name="keywords" content="produits technologiques, UP Technologie Corporation, transformation digitale, logiciels sur mesure, UP-TECH, services IT Dakar" />
+                <meta property="og:title" content="Produits UP-TECH" />
+                <meta property="og:description" content="Découvrez les solutions technologiques innovantes proposées par UP-TECH pour une transformation digitale réussie." />
+                <meta property="og:image" content="/assets/logos.png" /> {/* Lien vers une image de prévisualisation sur les réseaux sociaux */}
+                <meta property="og:url" content="https://uptechnologie-corpororation.com/contact" /> {/* Ton URL ici */}
+            </Helmet>
             <Header />
             <div className=''>
                 <div className='p-20 bg-contact bg-cover bg-opacity-50 pt-44'>
@@ -36,7 +46,7 @@ function page() {
                 <Product />
             </div>
             <Footer />
-        </div>
+        </>
     )
 }
 
