@@ -21,7 +21,7 @@ function Accueil() {
                 <meta property="og:url" content="https://uptechnologie-corpororation.com/" /> {/* Ton URL ici */}
             </Helmet>
 
-            <section id="home" className="overflow-hidden py-64 px-4 md:px-8 bg-cover image-bg" data-aos="zoom-out" data-aos-duration="2000">
+            <section id="home" className="overflow-hidden py-64 px-4 md:px-8 bg-cover gif-bg" data-aos="zoom-out" data-aos-duration="2000">
                 <div className="text-center relative">
                     <div className="">
                         <h1 className='text-gray-700 font-extrabold mb-2'>UP TECHNOLOGIE CORPORATION</h1>

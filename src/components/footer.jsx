@@ -72,7 +72,7 @@ function Footer() {
           ))}
         </nav>
         <div data-aos="fade-up" data-aos-duration="1000" className="mt-10 py-10 border-t border-gray-700 flex items-center justify-between">
-          <p className="text-gray-300">© 2024 UP-TECH - UP TECHNOLOGIE CORPORATION Inc. Tous droits réservés.</p>
+          <p className="text-gray-300 whitespace-pre text-sm">© 2024 UP-TECH - UP TECHNOLOGIE CORPORATION Inc. Tous droits réservés.</p>
           <div className="flex items-center gap-x-6 text-gray-400">
             {/* Réseaux sociaux */}
             {/* Utilise les liens réels ici */}

@@ -158,8 +158,8 @@ function Contact() {
                                                 {item.icon}
                                             </div>
                                             <div className='lg:p-0 p-2' data-aos="fade-right" data-aos-duration="400">
-                                                <h4 className="lg:text-lg text-base text- text-gray-500 font-bold ">{item.title}</h4>
-                                                <p className='mt-2 lg:text-2xl text-xl font-bold'>{item.contact}</p>
+                                                <h4 className="lg:text-lg text-base text-gray-500 font-bold ">{item.title}</h4>
+                                                <p className='mt-2 lg:text-2xl text-sm font-bold whitespace-normal'>{item.contact}</p>
                                             </div>
                                         </div>
                                     </li>
