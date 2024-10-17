@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .gif-bg {
-  background-image: url("../assets/only.gif");
+  background-image: url("../assets/bgground.jpg");
   background-size: cover;
   background-position: 90% 40%;
   width: 100%;
@@ -19,7 +19,7 @@
   .gif-bg {
     height: 75vh; /* La hauteur est réduite sur mobile pour une meilleure lisibilité */
     background-size: cover; 
-    background-position: 50% 0%;/* Ajuster l'image pour les petits écrans */
+    background-position: 30% 10%;/* Ajuster l'image pour les petits écrans */
   }
 }
 
