@@ -45,7 +45,7 @@ function Footer() {
       label: "Coordonnées",
       items: [
         { icon: <FaLocationDot className="h-4 w-4 font-bold" />, href: '/', name: 'Cité Khandar, Ouest Foire. Villa No 12 Dakar, Sénégal' },
-        { icon: <FaPhone className="h4 w-4" />, href: 'tel:+221788953039', name: '+221 78 895 30 39 / 77 095 75 60' },
+        { icon: <FaPhone className="h4 w-4" />, href: 'tel:+221788953039', name: '+221 78 895 30 39' },
         { icon: <FaEnvelope className="h-4 w-4" />, href: 'mailto:uptechnologiecorporation@gmail.com', name: 'uptechnologiecorporation@gmail.com' },
       ],
     },
