@@ -28,7 +28,7 @@ function Accueil() {
                         <h2 className="text-4xl whitespace-nowrap text-center lg:text-6xl sm:text-2xl font-extrabold md:text-4xl text-blue-500" data-aos="fade-up" data-aos-duration="2000">
                             Solutions innovantes
                         </h2>
-                        <p className="text-slate-100 text-center justify-center items-center px-14 whitespace-pre-line font-medium leading-relaxed animate-fadein500 mt-3 lg:text-xl" data-aos="fade-up" data-aos-duration="3000">
+                        <p className="text-slate-500 text-center justify-center items-center px-14 whitespace-pre-line font-medium leading-relaxed animate-fadein500 mt-3 lg:text-xl" data-aos="fade-up" data-aos-duration="3000">
                             Notre agence web vous accompagne dans la définition et la mise en œuvre d'une stratégie digitale adaptée à votre secteur d'activité et à vos objectifs
                         </p>
                     </div>
